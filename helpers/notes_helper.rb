@@ -1,2 +1,2 @@
-module PagesHelper
+module NotesHelper
 end

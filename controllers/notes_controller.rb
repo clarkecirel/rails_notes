@@ -1,10 +1,11 @@
 class NotesController < ApplicationController
+
   def index
     @notes = Note.all
   end
 
   def show
-    @note = Note.find(params[:id])
+    @notes = Note.find(params[:id])
   end
 
   def new
@@ -27,7 +28,7 @@ class NotesController < ApplicationController
     def update
       @note = Note.find(params[:id])
     
-      if @note.update(page_params)
+      if @note.update(note_params)
         redirect_to notes_path
       else
         render :edit
